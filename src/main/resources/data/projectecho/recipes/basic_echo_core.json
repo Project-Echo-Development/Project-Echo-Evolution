@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EIE",
+    "IRI",
+    "EIE"
+  ],
+  "key": {
+    "E": {
+      "item": "projectecho:echo_ingot"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "projectecho:basic_echo_core",
+    "count": 1
+  }
+}

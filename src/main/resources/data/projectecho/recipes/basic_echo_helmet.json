@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EEE",
+    "E E"
+  ],
+  "key": {
+    "E": {
+      "item": "projectecho:echo_ingot"
+    }
+  },
+  "result": {
+    "item": "projectecho:basic_echo_helmet",
+    "count": 1
+  }
+}

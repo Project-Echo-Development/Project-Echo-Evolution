@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " E ",
+    "EAE",
+    " E "
+  ],
+  "key": {
+    "E": {
+      "item": "projectecho:diamond_infused_echo_core"
+    },
+    "A": {
+      "item": "projectecho:carbon_infused_echo_pickaxe"
+    }
+  },
+  "result": {
+    "item": "projectecho:diamond_infused_echo_pickaxe",
+    "count": 1
+  }
+}

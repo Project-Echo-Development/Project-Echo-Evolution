@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "E E",
+    "ECE",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "projectecho:echo_ingot"
+    },
+    "C": {
+      "item": "projectecho:basic_echo_core"
+    }
+  },
+  "result": {
+    "item": "projectecho:basic_echo_chestplate",
+    "count": 1
+  }
+}

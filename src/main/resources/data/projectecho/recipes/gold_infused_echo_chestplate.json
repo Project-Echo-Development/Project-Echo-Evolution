@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " E ",
+    "EAE",
+    " E "
+  ],
+  "key": {
+    "E": {
+      "item": "projectecho:gold_infused_echo_core"
+    },
+    "A": {
+      "item": "projectecho:basic_echo_chestplate"
+    }
+  },
+  "result": {
+    "item": "projectecho:gold_infused_echo_chestplate",
+    "count": 1
+  }
+}

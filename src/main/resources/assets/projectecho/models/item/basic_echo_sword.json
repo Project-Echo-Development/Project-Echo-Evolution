@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "projectecho:item/basic_echo_sword"
+  }
+}
