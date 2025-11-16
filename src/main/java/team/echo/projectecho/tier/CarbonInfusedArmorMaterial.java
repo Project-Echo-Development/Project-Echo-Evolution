@@ -32,13 +32,13 @@ public class CarbonInfusedArmorMaterial implements IArmorMaterial {
     public int getDamageReductionAmount(EquipmentSlotType equipmentSlotType) {
         switch (equipmentSlotType) {
             case HEAD:
-                return 5;
+                return 20;
             case CHEST:
-                return 10;
+                return 28;
             case LEGS:
-                return 8;
+                return 24;
             case FEET:
-                return 6;
+                return 16;
             default:
                 return 0;
         }

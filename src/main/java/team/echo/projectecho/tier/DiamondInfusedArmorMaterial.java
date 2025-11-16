@@ -35,11 +35,11 @@ public class DiamondInfusedArmorMaterial implements IArmorMaterial {
         switch (equipmentSlotType) {
             case FEET:
             case HEAD:
-                return 7;
+                return 14;
             case CHEST:
-                return 12;
+                return 18;
             case LEGS:
-                return 10;
+                return 16;
             default:
                 return 0;
         }

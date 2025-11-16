@@ -18,7 +18,7 @@ public class GoldTier implements IItemTier {
 
     @Override
     public float getAttackDamage() {
-        return 6.0f;
+        return 10.0f;
     }
 
     @Override

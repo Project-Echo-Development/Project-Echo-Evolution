@@ -18,7 +18,7 @@ public class CarbonTier implements IItemTier {
 
     @Override
     public float getAttackDamage() {
-        return 7.0f;
+        return 40.0f;
     }
 
     @Override

@@ -67,11 +67,16 @@ public class BlockUtil {
         }
     }
 
-    public static void spawnFallingBlockGrid(World world, Block block, double startX, double startY, double startZ, int rows, int columns) {
-        for (int row = 0; row < rows; row++) {
-            for (int col = 0; col < columns; col++) { // Offsetted to avoid bugs that disallow landing
-                double centeredX = Math.floor(startX) + 0.5;
-                double centeredZ = Math.floor(startZ) + 0.5;
+    public static void spawnFallingBlockGrid(World world, Block block, boolean checkered, double startX, double startY, double startZ, int rows, int columns) {
+        double centeredX = Math.floor(startX) + 0.5;
+        double centeredZ = Math.floor(startZ) + 0.5;
+
+        for (int row = 0; row < rows; row++)
+            for (int col = 0; col < columns; col++) {
+                if (checkered && ((row + col) % 2 != 0))
+                    continue;
+
+                // Offsetted to avoid bugs that disallow landing
                 double x = centeredX + col;
                 double y = startY + 50;
                 double z = centeredZ + row;
@@ -83,7 +88,6 @@ public class BlockUtil {
                 fallingBlock.fallTime = 1;
                 world.addEntity(fallingBlock);
             }
-        }
     }
 
     public static void summonMultipleTNT(World world, BlockPos pos, int count, int fuseTime) {

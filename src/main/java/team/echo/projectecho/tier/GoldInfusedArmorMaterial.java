@@ -31,14 +31,13 @@ public class GoldInfusedArmorMaterial implements IArmorMaterial {
     @Override
     public int getDamageReductionAmount(EquipmentSlotType equipmentSlotType) {
         switch (equipmentSlotType) {
-            case HEAD:
-                return 4;
-            case CHEST:
-                return 9;
-            case LEGS:
-                return 7;
             case FEET:
-                return 4;
+            case HEAD:
+                return 6;
+            case CHEST:
+                return 12;
+            case LEGS:
+                return 10;
             default:
                 return 0;
         }

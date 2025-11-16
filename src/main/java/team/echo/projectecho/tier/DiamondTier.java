@@ -18,7 +18,7 @@ public class DiamondTier implements IItemTier {
 
     @Override
     public float getAttackDamage() {
-        return 9.0f;
+        return 24.0f;
     }
 
     @Override
