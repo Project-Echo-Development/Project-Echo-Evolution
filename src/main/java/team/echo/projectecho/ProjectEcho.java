@@ -12,6 +12,7 @@ import team.echo.projectecho.core.ProjectEchoCrafting;
 import team.echo.projectecho.core.ProjectEchoTools;
 import team.echo.projectecho.event.TooltipEventHandler;
 import team.echo.projectecho.zoom.QuickZoom;
+import team.echo.projectecho.zoom.QuickZoomSetup;
 
 @Mod(ProjectEcho.MOD_ID)
 public class ProjectEcho
@@ -27,10 +28,7 @@ public class ProjectEcho
         ProjectEchoArmor.REGISTRY.register(eventBus);
         ProjectEchoBlocks.REGISTRY.register(eventBus);
         ProjectEchoBlocks.ITEMS.register(eventBus);
-        DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> () -> {
-        zoomMod = new QuickZoom();
-        zoomMod.register();
-        });
+        DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> QuickZoomSetup::init);
         MinecraftForge.EVENT_BUS.register(new TooltipEventHandler());
     }
 }
