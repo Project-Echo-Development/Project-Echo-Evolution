@@ -43,7 +43,7 @@ public class QuickZoom {
 
     @SubscribeEvent
     public void onKeyInput(InputEvent.KeyInputEvent event) {
-        if (bind.isPressed()) {
+        if (bind.isKeyDown()) {
             zooming = !zooming;
             if (!zooming)
                 currentFov = baseFov;

@@ -12,7 +12,7 @@
 > * Diamond
 > * Carbon
 > ### Loot Blocks
-> * Currently 44 Drops
+> * Currently 78 Drops
 
 ---
 
