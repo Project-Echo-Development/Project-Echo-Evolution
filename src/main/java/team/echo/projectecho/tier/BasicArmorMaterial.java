@@ -17,13 +17,13 @@ public class BasicArmorMaterial implements IArmorMaterial {
     public int getDurability(EquipmentSlotType equipmentSlotType) {
         switch (equipmentSlotType) {
             case HEAD:
-                return 400;
+                return 800;
             case CHEST:
-                return 600;
+                return 1200;
             case LEGS:
-                return 500;
+                return 1000;
             case FEET:
-                return 450;
+                return 900;
             default:
                 return 0;
         }
@@ -32,14 +32,13 @@ public class BasicArmorMaterial implements IArmorMaterial {
     @Override
     public int getDamageReductionAmount(EquipmentSlotType equipmentSlotType) {
         switch (equipmentSlotType) {
-            case HEAD:
-                return 3;
-            case CHEST:
-                return 7;
-            case LEGS:
-                return 5;
             case FEET:
-                return 3;
+            case HEAD:
+                return 6;
+            case CHEST:
+                return 14;
+            case LEGS:
+                return 10;
             default:
                 return 0;
         }
@@ -67,7 +66,7 @@ public class BasicArmorMaterial implements IArmorMaterial {
 
     @Override
     public float getToughness() {
-        return 2;
+        return 8;
     }
 
     @Override

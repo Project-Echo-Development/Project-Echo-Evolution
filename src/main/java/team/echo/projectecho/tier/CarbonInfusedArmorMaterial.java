@@ -16,13 +16,13 @@ public class CarbonInfusedArmorMaterial implements IArmorMaterial {
     public int getDurability(EquipmentSlotType equipmentSlotType) {
         switch (equipmentSlotType) {
             case HEAD:
-                return 750;
+                return 4250;
             case CHEST:
-                return 1000;
+                return 5000;
             case LEGS:
-                return 900;
+                return 4500;
             case FEET:
-                return 800;
+                return 4200;
             default:
                 return 0;
         }
@@ -32,13 +32,13 @@ public class CarbonInfusedArmorMaterial implements IArmorMaterial {
     public int getDamageReductionAmount(EquipmentSlotType equipmentSlotType) {
         switch (equipmentSlotType) {
             case HEAD:
-                return 20;
+                return 30;
             case CHEST:
-                return 28;
+                return 42;
             case LEGS:
-                return 24;
+                return 36;
             case FEET:
-                return 16;
+                return 28;
             default:
                 return 0;
         }
@@ -66,7 +66,7 @@ public class CarbonInfusedArmorMaterial implements IArmorMaterial {
 
     @Override
     public float getToughness() {
-        return 4;
+        return 24;
     }
 
     @Override

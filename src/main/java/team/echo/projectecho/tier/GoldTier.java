@@ -8,7 +8,7 @@ public class GoldTier implements IItemTier {
 
     @Override
     public int getMaxUses() {
-        return 600;
+        return 1200;
     }
 
     @Override
@@ -18,7 +18,7 @@ public class GoldTier implements IItemTier {
 
     @Override
     public float getAttackDamage() {
-        return 10.0f;
+        return 15.0f;
     }
 
     @Override

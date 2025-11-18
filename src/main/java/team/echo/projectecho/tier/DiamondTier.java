@@ -8,7 +8,7 @@ public class DiamondTier implements IItemTier {
 
     @Override
     public int getMaxUses() {
-        return 1200;
+        return 2400;
     }
 
     @Override
@@ -18,7 +18,7 @@ public class DiamondTier implements IItemTier {
 
     @Override
     public float getAttackDamage() {
-        return 24.0f;
+        return 36.0f;
     }
 
     @Override

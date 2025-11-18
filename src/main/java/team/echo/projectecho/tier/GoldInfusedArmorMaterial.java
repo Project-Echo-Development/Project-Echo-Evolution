@@ -16,13 +16,13 @@ public class GoldInfusedArmorMaterial implements IArmorMaterial {
     public int getDurability(EquipmentSlotType equipmentSlotType) {
         switch (equipmentSlotType) {
             case HEAD:
-                return 550;
+                return 1200;
             case CHEST:
-                return 800;
+                return 2000;
             case LEGS:
-                return 700;
+                return 1600;
             case FEET:
-                return 600;
+                return 1100;
             default:
                 return 0;
         }
@@ -33,11 +33,11 @@ public class GoldInfusedArmorMaterial implements IArmorMaterial {
         switch (equipmentSlotType) {
             case FEET:
             case HEAD:
-                return 6;
+                return 9;
             case CHEST:
-                return 12;
+                return 18;
             case LEGS:
-                return 10;
+                return 15;
             default:
                 return 0;
         }
@@ -65,7 +65,7 @@ public class GoldInfusedArmorMaterial implements IArmorMaterial {
 
     @Override
     public float getToughness() {
-        return 3;
+        return 6;
     }
 
     @Override

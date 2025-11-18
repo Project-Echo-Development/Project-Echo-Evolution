@@ -58,8 +58,8 @@ public class LootBlock extends Block {
     private void randomLoot(World world, BlockPos pos) {
         if (!world.isRemote() && world instanceof ServerWorld) {
             ServerWorld serverWorld = (ServerWorld) world;
-            int random = MathUtil.getRandomInt(1, 78);
-//            int random = MathUtil.getRandomInt(77, 78);
+//            int random = MathUtil.getRandomInt(1, 78);
+            int random = MathUtil.getRandomInt(82, 95);
 //            int random = 76;
             pickLoot(random, serverWorld, pos);
         }
@@ -262,22 +262,22 @@ public class LootBlock extends Block {
                 world.addEntity(spongebobEnt);
                 break;
             case 35:
-                EntityUtil.spawnFallingItems(world, ProjectEchoCrafting.ECHO_INGOT.get(), pos, 18, MathUtil.getRandomInt(12, 18), 6);
+                EntityUtil.spawnFallingItems(world, ProjectEchoCrafting.ECHO_INGOT.get(), pos, 18, MathUtil.getRandomInt(12, 18), 6, "");
                 break;
             case 36:
-                EntityUtil.spawnFallingItems(world, ProjectEchoCrafting.ECHO_INGOT.get(), pos, 18, MathUtil.getRandomInt(12, 18), 6);
-                EntityUtil.spawnFallingItems(world, ProjectEchoCrafting.GOLD_INFUSED_ECHO_INGOT.get(), pos, 18, MathUtil.getRandomInt(6, 10), 6);
+                EntityUtil.spawnFallingItems(world, ProjectEchoCrafting.ECHO_INGOT.get(), pos, 18, MathUtil.getRandomInt(12, 18), 6, "");
+                EntityUtil.spawnFallingItems(world, ProjectEchoCrafting.GOLD_INFUSED_ECHO_INGOT.get(), pos, 18, MathUtil.getRandomInt(6, 10), 6, "");
                 break;
             case 37:
-                EntityUtil.spawnFallingItems(world, ProjectEchoCrafting.ECHO_INGOT.get(), pos, 18, MathUtil.getRandomInt(12, 18), 6);
-                EntityUtil.spawnFallingItems(world, ProjectEchoCrafting.GOLD_INFUSED_ECHO_INGOT.get(), pos, 18, MathUtil.getRandomInt(6, 10), 6);
-                EntityUtil.spawnFallingItems(world, ProjectEchoCrafting.DIAMOND_INFUSED_ECHO_INGOT.get(), pos, 18, MathUtil.getRandomInt(6, 10), 6);
+                EntityUtil.spawnFallingItems(world, ProjectEchoCrafting.ECHO_INGOT.get(), pos, 18, MathUtil.getRandomInt(12, 18), 6, "");
+                EntityUtil.spawnFallingItems(world, ProjectEchoCrafting.GOLD_INFUSED_ECHO_INGOT.get(), pos, 18, MathUtil.getRandomInt(6, 10), 6, "");
+                EntityUtil.spawnFallingItems(world, ProjectEchoCrafting.DIAMOND_INFUSED_ECHO_INGOT.get(), pos, 18, MathUtil.getRandomInt(6, 10), 6, "");
                 break;
             case 38:
-                EntityUtil.spawnFallingItems(world, ProjectEchoCrafting.ECHO_INGOT.get(), pos, 18, MathUtil.getRandomInt(8, 14), 6);
-                EntityUtil.spawnFallingItems(world, ProjectEchoCrafting.GOLD_INFUSED_ECHO_INGOT.get(), pos, 18, MathUtil.getRandomInt(6, 10), 6);
-                EntityUtil.spawnFallingItems(world, ProjectEchoCrafting.DIAMOND_INFUSED_ECHO_INGOT.get(), pos, 18, MathUtil.getRandomInt(6, 10), 6);
-                EntityUtil.spawnFallingItems(world, ProjectEchoCrafting.CARBON_INFUSED_ECHO_INGOT.get(), pos, 18, MathUtil.getRandomInt(6, 10), 6);
+                EntityUtil.spawnFallingItems(world, ProjectEchoCrafting.ECHO_INGOT.get(), pos, 18, MathUtil.getRandomInt(8, 14), 6, "");
+                EntityUtil.spawnFallingItems(world, ProjectEchoCrafting.GOLD_INFUSED_ECHO_INGOT.get(), pos, 18, MathUtil.getRandomInt(6, 10), 6, "");
+                EntityUtil.spawnFallingItems(world, ProjectEchoCrafting.DIAMOND_INFUSED_ECHO_INGOT.get(), pos, 18, MathUtil.getRandomInt(6, 10), 6, "");
+                EntityUtil.spawnFallingItems(world, ProjectEchoCrafting.CARBON_INFUSED_ECHO_INGOT.get(), pos, 18, MathUtil.getRandomInt(6, 10), 6, "");
                 break;
             case 39:
                 EntityUtil.spawnCustomZombieWithEnchantedGear(((ServerWorld) world).getWorld(), pos, "\2476\247lGolden Harris",
@@ -603,6 +603,102 @@ public class LootBlock extends Block {
                         world.addEntity(creeper);
                     }
                 }
+                break;
+            }
+            case 79: {
+                EntityUtil.spawnFallingItems(world, Items.TNT, pos, 18, MathUtil.getRandomInt(8, 64), 4, "§4§lBoom Boom On A Stick");
+                break;
+            }
+            case 80: {
+                ItemStack item = new ItemStack(Items.RED_BED);
+                item.setDisplayName(new StringTextComponent("§5§lBedwars"));
+                world.addEntity(new ItemEntity(world, pos.getX() + 1, pos.getY(), pos.getZ() + 1, item));
+                break;
+            }
+            case 81: {
+                ItemStack item = new ItemStack(Items.PAPER);
+                item.setDisplayName(new StringTextComponent("§lToilet Paper"));
+                world.addEntity(new ItemEntity(world, pos.getX() + 1, pos.getY(), pos.getZ() + 1, item));
+                break;
+            }
+            case 82: {
+                ItemStack item = new ItemStack(ProjectEchoArmor.GOLD_INFUSED_ECHO_CHESTPLATE.get());
+                item.setDisplayName(new StringTextComponent("§a§lCactus Chestplate"));
+                item.addEnchantment(Enchantments.THORNS, 67);
+                world.addEntity(new ItemEntity(world, pos.getX() + 1, pos.getY(), pos.getZ() + 1, item));
+                break;
+            }
+            case 83: {
+                ItemStack item = new ItemStack(ProjectEchoArmor.GOLD_INFUSED_ECHO_HELMET.get());
+                item.setDisplayName(new StringTextComponent("§a§lCactus Helmet"));
+                item.addEnchantment(Enchantments.THORNS, 67);
+                world.addEntity(new ItemEntity(world, pos.getX() + 1, pos.getY(), pos.getZ() + 1, item));
+                break;
+            }
+            case 84: {
+                ItemStack item = new ItemStack(ProjectEchoArmor.GOLD_INFUSED_ECHO_TROUSERS.get());
+                item.setDisplayName(new StringTextComponent("§a§lCactus Trousers"));
+                item.addEnchantment(Enchantments.THORNS, 67);
+                world.addEntity(new ItemEntity(world, pos.getX() + 1, pos.getY(), pos.getZ() + 1, item));
+                break;
+            }
+            case 85: {
+                ItemStack item = new ItemStack(ProjectEchoArmor.GOLD_INFUSED_ECHO_BOOTS.get());
+                item.setDisplayName(new StringTextComponent("§a§lCactus Boots"));
+                item.addEnchantment(Enchantments.THORNS, 67);
+                world.addEntity(new ItemEntity(world, pos.getX() + 1, pos.getY(), pos.getZ() + 1, item));
+                break;
+            }
+            case 86: {
+                ItemStack item = new ItemStack(ProjectEchoTools.GOLD_INFUSED_ECHO_SWORD.get());
+                item.setDisplayName(new StringTextComponent("§d§lA Sharp Sword"));
+                item.addEnchantment(Enchantments.SHARPNESS, 25);
+                world.addEntity(new ItemEntity(world, pos.getX() + 1, pos.getY(), pos.getZ() + 1, item));
+                break;
+            }
+            case 87: {
+                ItemStack item = new ItemStack(Items.STICK);
+                item.setDisplayName(new StringTextComponent("§7§lToothpick"));
+                item.addEnchantment(Enchantments.SHARPNESS, 20);
+                world.addEntity(new ItemEntity(world, pos.getX() + 1, pos.getY(), pos.getZ() + 1, item));
+                break;
+            }
+            case 88: {
+                ItemStack item = new ItemStack(Items.STICK);
+                item.setDisplayName(new StringTextComponent("§8§lEl Boost"));
+                item.addEnchantment(Enchantments.KNOCKBACK, 100);
+                world.addEntity(new ItemEntity(world, pos.getX() + 1, pos.getY(), pos.getZ() + 1, item));
+                break;
+            }
+            case 89: {
+                ItemStack item = new ItemStack(Items.CARROT);
+                item.setDisplayName(new StringTextComponent("§4§lRed Hot Chili Pepper?"));
+                item.addEnchantment(Enchantments.FIRE_ASPECT, 91);
+                world.addEntity(new ItemEntity(world, pos.getX() + 1, pos.getY(), pos.getZ() + 1, item));
+                break;
+            }
+            case 90: {
+                BlockUtil.spawnOneByOneFallingBlockTower(world, Blocks.DIRT, pos.getX(), pos.getY(), pos.getZ(), 21, 8);
+                break;
+            }
+            case 91: {
+                BlockUtil.spawnOneByOneFallingBlockTower(world, Blocks.HAY_BLOCK, pos.getX(), pos.getY(), pos.getZ(), 21, 8);
+                break;
+            }
+            case 92: {
+                BlockUtil.spawnOneByOneFallingBlockTower(world, Blocks.COAL_BLOCK, pos.getX(), pos.getY(), pos.getZ(), 21, 8);
+                break;
+            }
+            case 93: {
+                BlockUtil.spawnOneByOneFallingBlockTower(world, Blocks.NETHER_QUARTZ_ORE, pos.getX(), pos.getY(), pos.getZ(), 21, 8);
+                break;
+            }
+            case 94: {
+                BlockUtil.spawnFallingBlockGrid(world, Blocks.LAVA, true, pos.getX(), pos.getY(), pos.getZ(), 9, 9);
+                break;
+            }
+            case 95: {
+                BlockUtil.spawnFallingBlockGrid(world, Blocks.WATER, true, pos.getX(), pos.getY(), pos.getZ(), 9, 9);
                 break;
             }
         }

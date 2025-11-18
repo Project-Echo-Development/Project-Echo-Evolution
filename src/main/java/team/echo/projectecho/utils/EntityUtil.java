@@ -178,7 +178,7 @@ public class EntityUtil {
             player.sendMessage(new StringTextComponent("You have been teleported up!"), player.getUniqueID());
     }
 
-    public static void spawnFallingItems(World world, Item item, BlockPos pos, int up, int itemCount, int intervalTicks) {
+    public static void spawnFallingItems(World world, Item item, BlockPos pos, int up, int itemCount, int intervalTicks, String name) {
         Random random = new Random();
         for (int i = 0; i < itemCount; i++) {
             int delay = i * intervalTicks;
@@ -186,6 +186,8 @@ public class EntityUtil {
                 double xOffset = -1.5 + (3.0 * random.nextDouble());
                 double zOffset = -1.5 + (3.0 * random.nextDouble());
                 ItemStack itemStack = new ItemStack(item);
+                if (!name.isEmpty())
+                    itemStack.setDisplayName(new StringTextComponent(name));
                 ItemEntity itemEntity = new ItemEntity(world, pos.getX() + 0.5 + xOffset, pos.getY() + up, pos.getZ() + 0.5 + zOffset, itemStack);
                 itemEntity.setMotion(0, -0.1, 0);
                 world.addEntity(itemEntity);

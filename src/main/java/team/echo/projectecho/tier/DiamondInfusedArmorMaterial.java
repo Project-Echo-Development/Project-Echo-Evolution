@@ -18,13 +18,13 @@ public class DiamondInfusedArmorMaterial implements IArmorMaterial {
     public int getDurability(EquipmentSlotType equipmentSlotType) {
         switch (equipmentSlotType) {
             case HEAD:
-                return 1050;
+                return 2100;
             case CHEST:
-                return 1400;
+                return 2800;
             case LEGS:
-                return 1200;
+                return 2400;
             case FEET:
-                return 1000;
+                return 2000;
             default:
                 return 0;
         }
@@ -35,11 +35,11 @@ public class DiamondInfusedArmorMaterial implements IArmorMaterial {
         switch (equipmentSlotType) {
             case FEET:
             case HEAD:
-                return 14;
+                return 21;
             case CHEST:
-                return 18;
+                return 27;
             case LEGS:
-                return 16;
+                return 24;
             default:
                 return 0;
         }
@@ -67,7 +67,7 @@ public class DiamondInfusedArmorMaterial implements IArmorMaterial {
 
     @Override
     public float getToughness() {
-        return 5;
+        return 12;
     }
 
     @Override

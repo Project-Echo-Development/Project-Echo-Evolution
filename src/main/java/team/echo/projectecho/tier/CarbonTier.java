@@ -8,7 +8,7 @@ public class CarbonTier implements IItemTier {
 
     @Override
     public int getMaxUses() {
-        return 800;
+        return 5000;
     }
 
     @Override
@@ -18,7 +18,7 @@ public class CarbonTier implements IItemTier {
 
     @Override
     public float getAttackDamage() {
-        return 40.0f;
+        return 60.0f;
     }
 
     @Override

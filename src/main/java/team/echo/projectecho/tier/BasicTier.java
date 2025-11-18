@@ -12,7 +12,7 @@ public class BasicTier implements IItemTier {
     //BASIC(4, 400, 4.0f, 6.0f, 16, () -> Ingredient.fromItems(ProjectEchoCrafting.BASIC_ECHO_CORE.get()));
     @Override
     public int getMaxUses() {
-        return 400;
+        return 800;
     }
 
     @Override
@@ -22,7 +22,7 @@ public class BasicTier implements IItemTier {
 
     @Override
     public float getAttackDamage() {
-        return 4.0f;
+        return 8.0f;
     }
 
     @Override
