@@ -58,8 +58,8 @@ public class LootBlock extends Block {
     private void randomLoot(World world, BlockPos pos) {
         if (!world.isRemote() && world instanceof ServerWorld) {
             ServerWorld serverWorld = (ServerWorld) world;
-//            int random = MathUtil.getRandomInt(1, 78);
-            int random = MathUtil.getRandomInt(82, 95);
+            int random = MathUtil.getRandomInt(1, 95);
+//            int random = MathUtil.getRandomInt(82, 95);
 //            int random = 76;
             pickLoot(random, serverWorld, pos);
         }
@@ -68,7 +68,7 @@ public class LootBlock extends Block {
     private void pickLoot(int ran, World world, BlockPos pos) {
         PlayerEntity player = world.getClosestPlayer(pos.getX(), pos.getY(), pos.getZ(), 10, false);
         ServerPlayerEntity serverPlayer = (ServerPlayerEntity) player;
-        ChatUtil.broadcastMessage((ServerWorld) world, String.valueOf(ran));
+//        ChatUtil.broadcastMessage((ServerWorld) world, String.valueOf(ran));
         if (player == null)
             return;
 
